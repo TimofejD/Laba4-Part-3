@@ -29,6 +29,14 @@ struct Vector2f
     }
 };
 
+struct PersProjInfo
+{
+    float FOV;
+    float Width;
+    float Height;
+    float zNear;
+    float zFar;
+};
 
 struct Vector3f
 {

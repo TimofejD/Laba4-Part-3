@@ -1,4 +1,7 @@
 #include "math_3d.h"
+#include <glm/vec3.hpp>
+#include <glm/mat4x4.hpp>
+#include <glm/glm.hpp>
 
 Vector3f Vector3f::Cross(const Vector3f& v) const
 {
