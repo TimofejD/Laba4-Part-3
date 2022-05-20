@@ -1,7 +1,25 @@
 #include <stdio.h>
 #include <string.h>
+#include <assert.h>
 
 #include "technique.h"
+
+static const char* pVSName = "VS";
+static const char* pFSName = "FS";
+
+const char* ShaderType2ShaderName(GLuint Type)
+{
+    switch (Type) {
+    case GL_VERTEX_SHADER:
+        return pVSName;
+    case GL_FRAGMENT_SHADER:
+        return pFSName;
+    default:
+        assert(0);
+    }
+
+    return NULL;
+}
 
 Technique::Technique() {
     m_shaderProg = 0;
